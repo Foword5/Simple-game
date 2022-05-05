@@ -78,7 +78,7 @@ function touch_move_coin(){
         else if(score == 100) speed=7;
         else if(score == 400) speed=9;
         
-        if(score%100 == 0){
+        if(score%200 == 0){
             ennemies.push(new ennemie(getRandomInt(4)+4))
         }
     }
