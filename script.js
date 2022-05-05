@@ -18,8 +18,8 @@ var boxSize = 0;
 
 //---- coin
 
-var coinx = getRandomInt(780);
-var coiny = getRandomInt(780)+boxSize;
+var coinx = getRandomInt(680)+50;
+var coiny = getRandomInt(680)+boxSize+50;
 var coinsize = 20;
 
 var score = 0;
@@ -70,8 +70,8 @@ function touch_move_coin(){
 
         drawcube(coinx,coiny,coinsize,"darkgrey");
 
-        coinx = getRandomInt(780);
-        coiny = getRandomInt(780)+boxSize;
+        coinx = getRandomInt(680)+50;
+        coiny = getRandomInt(680)+boxSize+50;
         draw_coin(coinx,coiny,coinsize);
 
         if(score == 5) speed=5;
