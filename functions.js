@@ -28,6 +28,10 @@ function keyup(input){
     }
 }
 
+function drawImage(image,parx,pary){
+    ctx.drawImage(image,parx,pary)
+}
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }

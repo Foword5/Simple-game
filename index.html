@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Stupid game</title>
+        <link rel="icon" href="favicon.ico">
         <script src="functions.js"></script>
         <script src="ennemie.js"></script>
         <script src="script.js"></script>
@@ -10,5 +11,15 @@
     <body onkeydown="keydown(event)" onkeyup="keyup(event)">
         <div id="score" style="font:48px serif"></div>
         <canvas width="800px" height="800px" id="canvas"></canvas>
+        <img src="sprite/ennemy.png" id="ennemy_img">
+        <img src="sprite/coin.png" id="coin_img">
+        <img src="sprite/coin_reverse.png" id="coin_reverse_img">
     </body>
+    <style>
+        img{
+            opacity: 0%;
+            width: 1px;
+            height: 1px;
+        }
+    </style>
 </html>

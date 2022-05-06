@@ -4,6 +4,7 @@ class ennemie {
         this.speed = speed;
         this.pos2 = getRandomInt(770)+30;
         this.direction = getRandomInt(4);
+        this.image = document.getElementById("ennemy_img");
         if(this.direction == 1 || this.direction == 3){
             this.pos1 = 800;
         }else{
@@ -23,9 +24,9 @@ class ennemie {
 
     draw(){
         if(this.direction == 0 || this.direction == 1){
-            drawcube(this.pos1,this.pos2,this.size,"green");
+            drawImage(this.image,this.pos1,this.pos2);
         }else{
-            drawcube(this.pos2,this.pos1,this.size,"green");
+            drawImage(this.image,this.pos2,this.pos1);
         }
     }
 

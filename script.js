@@ -28,7 +28,6 @@ var ctx;
 var canva;
 var gaming;
 
-ennemies = [new ennemie(4),new ennemie(5),new ennemie(6)];
 
 function draw_perso(parx,pary,parsize){
     if(score < 5) drawcube(parx,pary,parsize,"black");
@@ -46,9 +45,9 @@ function draw_perso(parx,pary,parsize){
 
 function draw_coin(parx,pary,parsize){
     if([4,9,19,49,99,199,299,399,499,999].includes(score)){
-        drawcircle(parx,pary,parsize,"orange");
+        drawImage(coin_reverse_image,parx,pary)
     }else{
-        drawcircle(parx,pary,parsize,"yellow");
+        drawImage(coin_image,parx,pary)
     }
 }
 
@@ -124,8 +123,12 @@ function game(){
 }
 
 function init(){
+    coin_image = document.getElementById("coin_img");
+    coin_reverse_image = document.getElementById("coin_reverse_img");
+    
     canva = document.getElementById("canvas");
     ctx = canvas.getContext('2d');
+    ennemies = [new ennemie(4),new ennemie(5),new ennemie(6)];
 
     gaming = setInterval(game, 20);
 }
