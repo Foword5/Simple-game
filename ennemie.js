@@ -2,7 +2,7 @@ class ennemie {
     constructor(speed){
         this.size = 30;
         this.speed = speed;
-        this.pos2 = getRandomInt(770)+30;
+        this.pos2 = getRandomInt(770);
         this.direction = getRandomInt(4);
         this.image = document.getElementById("ennemy_img");
         this.caution = document.getElementById("caution");
@@ -45,7 +45,7 @@ class ennemie {
     async die(){
         if(this.pos1 > 800 || this.pos1 < -30){
             this.timer = new Date().getTime();
-            this.pos2 = getRandomInt(770)+30;
+            this.pos2 = getRandomInt(770);
             this.direction = getRandomInt(4);
 
             if(this.direction == 1 || this.direction == 3){
