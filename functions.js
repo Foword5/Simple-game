@@ -78,3 +78,8 @@ function drawStar(parx,pary,size,color){
     ctx.fillStyle=color;
     ctx.fill();
 }
+
+function sleep(delay) {
+    var start = new Date().getTime();
+    while (new Date().getTime() < start + delay);
+}
