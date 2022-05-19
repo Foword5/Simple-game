@@ -125,7 +125,9 @@ function game(){
 function init(){
     coin_image = document.getElementById("coin_img");
     coin_reverse_image = document.getElementById("coin_reverse_img");
-    
+    ennemy = document.getElementById("ennemy_img");
+    caution = document.getElementById("caution");
+
     canva = document.getElementById("canvas");
     ctx = canvas.getContext('2d');
     ennemies = [new ennemie(4),new ennemie(5),new ennemie(6)];
