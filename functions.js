@@ -1,33 +1,3 @@
-function keydown(input){
-    e = input || window.event;
-    e = e.keyCode;
-    if(e == 90){
-        vecnegy = -speed;
-    }else if(e == 83){
-        vecposy = speed;
-    }
-    if(e == 81 ){
-        vecnegx = -speed;
-    }else if(e == 68){
-        vecposx = speed;
-    }
-}
-
-function keyup(input){
-    e = input || window.event;
-    e = e.keyCode;
-    if(e == 90){
-        vecnegy = 0;
-    }else if(e == 83){
-        vecposy = 0;
-    }
-    if(e == 81 ){
-        vecnegx = 0;
-    }else if(e == 68){
-        vecposx = 0;
-    }
-}
-
 function drawImage(image,parx,pary){
     ctx.drawImage(image,parx,pary)
 }
