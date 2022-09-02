@@ -59,7 +59,7 @@ function init(){
     caution = document.getElementById("caution");
 
     //setting the basics for drawing
-    canva = document.getElementById("canvas");
+    canvas = document.getElementById("canvas");
     ctx = canvas.getContext('2d');
 
     //creating the enemies
