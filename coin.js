@@ -1,11 +1,11 @@
 class coin {
-    constructor(){
-        this.x = getRandomInt(680)+50;
-        this.y = getRandomInt(680)+50;
+    constructor(sizeX, sizeY){
+        this.x = getRandomInt(sizeX-120)+50;
+        this.y = getRandomInt(sizeY-120)+50;
         this.size = 20;
     }
 
-    touch_move_coin(main_char){
+    touch_move_coin(main_char, sizeX, sizeY){
         if (
         main_char.getX() < this.x + this.size && 
         main_char.getX() + main_char.getSize() > this.x && 
@@ -14,8 +14,8 @@ class coin {
     
             drawcube(this.x,this.y,this.size,"darkgrey");
     
-            this.x = getRandomInt(680)+50;
-            this.y = getRandomInt(680)+50;
+            this.x = getRandomInt(sizeX-120)+50;
+            this.y = getRandomInt(sizeY-120)+50;
 
             increment_score(main_char)
         }

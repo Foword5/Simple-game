@@ -28,8 +28,9 @@ function increment_score(main_char){
     if(score%200 == 0)
         enemies.push(new ennemie(getRandomInt(4)+4));
 
-    if(score == 5) main_char.setSpeed(7);
-    else if(score == 100) main_char.setSpeed(9);
+    if(score == 5) main_char.setSpeed(6);
+    else if(score == 100) main_char.setSpeed(8);
+    else if(score == 400) main_char.setSpeed(9);
 }
 
 function game(){
@@ -40,12 +41,12 @@ function game(){
     perso.draw(score);
 
     coin.draw(score);
-    coin.touch_move_coin(perso,score);
+    coin.touch_move_coin(perso,canvas.width,canvas.height);
 
     for (var i=0;i<enemies.length;i++){
-        enemies[i].draw();
+        enemies[i].draw(canvas.width);
         enemies[i].move();
-        enemies[i].die();
+        enemies[i].die(canvas.width);
         enemies[i].kill(perso.getX(),perso.getY(),perso.getSize())
     }
 }
@@ -69,7 +70,7 @@ function init(){
     document.addEventListener('keydown', function(){perso.keydown()});
     document.addEventListener('keyup', function(){perso.keyup()});
 
-    coin = new coin();
+    coin = new coin(canvas.height,canvas.width);
 
     gaming = setInterval(game, 20);
 }
