@@ -3,7 +3,7 @@ window.onload = init;
 var score = 0;
 
 var ctx;
-var canva;
+var canvas;
 var gaming;
 
 function clear(){
@@ -65,7 +65,7 @@ function init(){
     enemies = [new enemy(4,ennemy,caution),new enemy(5,ennemy,caution),new enemy(6,ennemy,caution)];
 
     //creating the main caracter
-    perso = new main_character(canva.height,canva.width);
+    perso = new main_character(canvas.height,canvas.width);
     document.addEventListener('keydown', function(){perso.keydown()});
     document.addEventListener('keyup', function(){perso.keyup()});
 
