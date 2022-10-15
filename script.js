@@ -28,9 +28,8 @@ function increment_score(main_char){
     if(score%200 == 0)
         enemies.push(new ennemie(getRandomInt(4)+4));
 
-    if(score == 5) main_char.setSpeed(5);
-    else if(score == 100) main_char.setSpeed(7);
-    else if(score == 400) main_char.setSpeed(9);
+    if(score == 5) main_char.setSpeed(7);
+    else if(score == 100) main_char.setSpeed(9);
 }
 
 function game(){

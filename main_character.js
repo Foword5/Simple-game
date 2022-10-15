@@ -9,7 +9,7 @@ class main_character {
         this.vecnegx = 0;
         this.vecnegy = 0;
 
-        this.speed = 3;
+        this.speed = 5;
 
         this.canvasHeight = canvasHeight;
         this.canvasWidth = canvasWidth;
