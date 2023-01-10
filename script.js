@@ -18,7 +18,7 @@ function write_score(parscore) {
 function end(){
     ctx.fillStyle = "white";
     ctx.font = '48px serif';
-    ctx.fillText('You loose', (canvas.width/2)-120, (canvas.height/2)-50);
+    ctx.fillText('You lost', (canvas.width/2)-120, (canvas.height/2)-50);
     ctx.fillText('Final score : '+ score, (canvas.width/2)-130, (canvas.height/2));
     clearInterval(gaming);
 }
