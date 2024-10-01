@@ -1,4 +1,4 @@
-# Stupid Game
+# Simple Game
 ## A game I made when I was bored, but it's even more boring.
 
 The game is coded in native javascript using a html canvas to draw the elements.
